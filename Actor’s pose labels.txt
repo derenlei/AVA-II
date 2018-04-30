@@ -1,0 +1,14 @@
+stand (45790):12
+sit (30037):11
+walk (12765):14
+bend/bow (at the waist) (2592):1
+lie/sleep (1897):8
+dance (1406):4
+run/jog (1146):10
+crouch/kneel (678):3
+martial art (624):9
+get up (439):6
+jump/leap (151):7
+fall down (114):5
+crawl (61):2
+swim (32):13
