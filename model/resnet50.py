@@ -1,3 +1,5 @@
+# model structure http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006
+# https://github.com/tensorflow/models/blob/master/official/resnet/resnet_model.py
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
