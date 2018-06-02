@@ -178,8 +178,13 @@ def main(unused_argv):
   eval_labels = np.asarray(mnist.test.labels, dtype=np.int32)
 
   # Create the Estimator
+  session_config = tf.ConfigProto()
+  session_config.gpu_options.allow_growth = True
+  config = tf.estimator.RunConfig(session_config = session_config)
+
   mnist_classifier = tf.estimator.Estimator(
-      model_fn=resnet50, model_dir="test2")
+      model_fn=resnet50, model_dir="test2",
+      config = config)
 
   # Set up logging for predictions
   # Log the values in the "Softmax" tensor with label "probabilities"
@@ -207,7 +212,7 @@ def main(unused_argv):
       num_epochs=1,
       shuffle=False)
  
-  train_spec = tf.estimator.TrainSpec(input_fn=train_input_fn, max_steps=1000)
+  train_spec = tf.estimator.TrainSpec(input_fn=train_input_fn, max_steps=3000)
   eval_spec = tf.estimator.EvalSpec(input_fn=eval_input_fn)
   tf.estimator.train_and_evaluate(mnist_classifier, train_spec, eval_spec)
 
