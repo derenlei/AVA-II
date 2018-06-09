@@ -8,9 +8,9 @@ import os
 import cv2 #used to read image
 flags=tf.flags
 logging=tf.logging
-flags.DEFINE_string("data_path", None, "Where your input data stored. Usually AVA-II")
-flags.DEFINE_string("image_path", None, "Where your image stored. Usually /data/ece194n/AVA/keyframes/")
-flags.DEFINE_string("image_save_path", None, "Where your image saved. Usually images")
+flags.DEFINE_string("data_path", 'AVA-II', "Where your input data stored. Usually AVA-II")
+flags.DEFINE_string("image_path", '/data/ece194n/AVA/keyframes', "Where your image stored. Usually /data/ece194n/AVA/keyframes/")
+flags.DEFINE_string("image_save_path", 'images', "Where your image saved. Usually images")
 FLAGS = flags.FLAGS
 data_path=FLAGS.data_path
 data_path=data_path.strip()
